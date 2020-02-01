@@ -12,6 +12,15 @@ def load_images_from_folder(folder):
             images.append(img)
     return images
 
+def determine_length_of_image(user_input):
+    total = 9
+    for charac in user_input :
+        if charac==' ':
+            total+=2
+        else :
+            total+=6
+    return total
+
 #calls method that will load images and place them in an array
 stored_images = load_images_from_folder('Images_For_Hack')
 
@@ -44,6 +53,10 @@ print(welcome)
 
 outputMessage = input("What word or words would you like to display?\n")
 
+#this method will tell you what the width of the collage must be.
+width_of_collage = determine_length_of_image(outputMessage)
+print(width_of_collage)
+
 col_1 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
 col_2 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
 col_3 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
@@ -63,3 +76,4 @@ collage = np.hstack([col_1, col_2,col_3, col_4,col_5, col_6,col_7, col_8,col_9, 
 
 cv.imshow('Image to display',collage)
 cv.waitKey(0)
+
