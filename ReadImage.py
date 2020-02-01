@@ -5,7 +5,7 @@ import numpy
 
 #will work with both .jpg and .png files
 img_j = cv.imread("Picture2.jpg")
-cv.imshow('Fleg Logo - Original', img_j)
+cv.imshow('FLEG Logo - Original', img_j)
 #Note: problem with the imported file that it is not completely displaying
 
 # type() method will get you the image type of whatever you have loaded
@@ -38,7 +38,23 @@ cv.waitKey(0)
 
 #This next technique is for adjusting the brightness of an image.
 #I believe that we should use it for brightening light images that we will use to write or dark images if it were reversed
+#My understanding of this method is that it takes a zeroes vector and somehow weights the image with them. I believe that you
+# should be able to do the opposite with black but it might be more difficult to figure out how to do this
 contrast_img = cv.addWeighted(img_j, 2.5, numpy.zeros(img_j.shape, img_j.dtype), 0, 0)
 cv.imshow('FLEG logo - Brightened', contrast_img)
 cv.waitKey(0)
+
+#use the following function to blur photos
+#key things here are that the (11,11) need to be odd and positive. Higher the number the higher the blur
+#try changing to (111,111) to see the difference
+blur_image = cv.GaussianBlur(img_j, (11,11), 0) 
+cv.imshow('FLEG logo - Blurred', blur_image)
+cv.waitKey(0)
+
+#NOTE: here is the grayscale method!!! It is super straightforward and easy to understand
+gray_img = cv.cvtColor(img_j, cv.COLOR_BGR2GRAY)
+cv.imshow('FLEG logo - Gray-Scaled', gray_img)
+cv.waitKey(0)
+
+
 

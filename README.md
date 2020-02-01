@@ -35,7 +35,7 @@ of those values (765). Depending on how many pixels you have, you can add all th
 Furthermore, If you are writing in white on top of a black background you could take the whitest images (those that are first on the low end of the sorted list) and use those for your words. If you know the word that you are creating you should know the number of images you will need and can select those images. After this, you should randomize the order of the images that are left over to make the background seem more blended. Then create your image. If there is not enough contrast then you can perhaps brighten those images that you are writing with and also apply a blur to those images that you are using as the background to make even more of a contrast. 
 (I showed this to Greg and Kendall before they left)
 
-
+I talked with the Exxon Guy (the one in the orange polo that we talked to before at the swamp) and he gave me a ton of advice on how to optimize stuff especially if we don't want to move a ton of data around. He said to start with a smaller data set and scale it according to what you need. So if you look at the other file that I wrote this is what I am doing.
 
 To-do:
 1) Loop for loading images from another folder in which they are stored. I DO NOT want to have this folder in the repo. We DO NOT need to be moving these images around.
