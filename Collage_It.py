@@ -12,3 +12,9 @@ def load_images_from_folder(folder):
     return images
 
 stored_images = load_images_from_folder('Images_For_Hack')
+
+for image in stored_images:
+    cv.imshow('Image to display',image)
+    cv.waitKey(0)
+
+print(len(stored_images))
