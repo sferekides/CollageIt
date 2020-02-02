@@ -51,7 +51,13 @@ for image in BG_images:
 welcome = "Welcome to CollageIt!\nPlease input the word or words that you would like to display with images!\n"
 print(welcome)
 
-outputMessage = input("What word or words would you like to display?\n")
+while True:
+	outputMessage = input("What word or words would you like to display?\nPlease use all capital letters\n")
+	if not outputMessage.isupper():
+		print("Sorry, please use all capital letters only.\n")
+		continue
+	else:
+		break
 
 #this method will tell you what the width of the collage must be.
 width_of_collage = determine_length_of_image(outputMessage)
