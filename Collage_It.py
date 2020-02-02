@@ -328,22 +328,7 @@ def determine_length_of_image(user_input):
         else :
             total+=6
     return total
-
-def output_columns(user_input) :
-    columns = []
-    for charac in user_input :
-        vec = []
-        if charac=='a' or charac =='A':
-            vec = letterA()
-            columns.append(vec)
-        if charac=='a' or charac =='A':
-            vec = letterA()
-            columns.append(vec)
         
-
-        
-
-
 #calls method that will load images and place them in an array
 stored_images = load_images_from_folder('Images_For_Hack')
 
@@ -367,15 +352,26 @@ for image in BG_images:
     img = cv.resize(image, (0,0), fx=0.50, fy=0.50)
     ReS_images.append(img)
 
-#white image
-white_img = np.zeros([100, 100, 3], dtype=np.uint8)
-white_img.fill(255)
-whiteImages = [white_img]
+#white image for testing
+#white_img = np.zeros([100, 100, 3], dtype=np.uint8)
+#white_img.fill(255)
+#whiteImages = [white_img]
 
-#black image
-black_img = np.zeros([100, 100, 3], dtype=np.uint8)
-black_img.fill(0)
-blackImages = [black_img]
+#black image for testing
+#black_img = np.zeros([100, 100, 3], dtype=np.uint8)
+#black_img.fill(0)
+#blackImages = [black_img]
+
+def output_columns(user_input) :
+    columns = []
+    for charac in user_input :
+        vec = []
+        if charac=='a' or charac =='A':
+            vec = letterA()
+            columns.append(vec)
+        if charac=='b' or charac =='B':
+            vec = letterB()
+            columns.append(vec)
 
 # ****** Starting program with user input below ****** #
 
@@ -417,29 +413,27 @@ for image in Z[midPoint:]:
 
 
 
-col_1 = np.vstack([sortedVector[0],sortedVector[0],sortedVector[0]]) # Simply put the images in the list
-col_2 = np.vstack([sortedVector[1],sortedVector[1],sortedVector[1]]) # Simply put the images in the list
-col_3 = np.vstack([sortedVector[8],sortedVector[8],sortedVector[8]]) # Simply put the images in the list
+#col_1 = np.vstack([sortedVector[0],sortedVector[0],sortedVector[0]]) # Simply put the images in the list
+#col_2 = np.vstack([sortedVector[1],sortedVector[1],sortedVector[1]]) # Simply put the images in the list
+#col_3 = np.vstack([sortedVector[8],sortedVector[8],sortedVector[8]]) # Simply put the images in the list
 
-collage = np.hstack([col_1, col_2,col_3])
+#collage = np.hstack([col_1, col_2,col_3])
 
-col_1 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_2 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_3 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_4 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_5 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_6 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_7 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_8 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_9 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_10 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_11 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_12 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_13 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_14 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-
-
-collage = np.hstack([col_1, col_2,col_3, col_4,col_5, col_6,col_7, col_8,col_9, col_10,col_11, col_12,col_13, col_14])
+#col_1 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_2 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_3 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_4 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_5 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_6 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_7 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_8 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_9 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_10 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_11 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_12 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_13 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#col_14 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
+#collage = np.hstack([col_1, col_2,col_3, col_4,col_5, col_6,col_7, col_8,col_9, col_10,col_11, col_12,col_13, col_14])
 
 
 cv.imshow('Image to display',collage)
