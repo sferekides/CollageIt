@@ -402,11 +402,10 @@ col_11 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put th
 col_12 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
 col_13 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
 col_14 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-"s"
+
+
 collage = np.hstack([col_1, col_2,col_3, col_4,col_5, col_6,col_7, col_8,col_9, col_10,col_11, col_12,col_13, col_14])
 
-#cv.imshow('Image to display',collage)
-#cv.waitKey(0)
 
 cv.imshow('Image to display',collage)
 cv.waitKey(0)
