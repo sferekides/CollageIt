@@ -21,6 +21,21 @@ def determine_length_of_image(user_input):
             total+=6
     return total
 
+def output_columns(user_input) :
+    columns = []
+    for charac in user_input :
+        vec = []
+        if charac=='a' or charac =='A':
+            vec = letterA()
+            columns.append(vec)
+        if charac=='a' or charac =='A':
+            vec = letterA()
+            columns.append(vec)
+        
+
+        
+
+
 #calls method that will load images and place them in an array
 stored_images = load_images_from_folder('Images_For_Hack')
 
