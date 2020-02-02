@@ -364,7 +364,7 @@ for image in stored_images:
 ReS_images = []
 
 for image in BG_images:
-    img = cv.resize(image, (0,0), fx=0.25, fy=0.25)
+    img = cv.resize(image, (0,0), fx=0.50, fy=0.50)
     ReS_images.append(img)
 
 #white image
@@ -387,6 +387,41 @@ outputMessage = input("What word or words would you like to display?\n")
 #this method will tell you what the width of the collage must be.
 width_of_collage = determine_length_of_image(outputMessage)
 print(width_of_collage)
+
+sumGray = 0
+ranking = []
+for images in  ReS_images :
+    for i in range (images.shape[0]): #from zero to height
+        for j in range (images.shape[1]): #from zero to width 
+           sumGray += images[i][j]
+    numPixels = images.shape[0] * images.shape[0]          
+    sumGray /= numPixels
+    ranking.append(sumGray)
+    sumGray = 0
+
+Z = [x for _,x in sorted(zip(ranking,ReS_images))]
+#print(ranking)
+
+midPoint = int((len(Z) / 2))
+
+sortedVector = []
+
+for index, image in zip(range(midPoint), Z) :
+    blurred = cv.GaussianBlur(image, (11,11), 0) 
+    sortedVector.append(blurred)
+
+midPoint += 1
+for image in Z[midPoint:]:
+    brightened = cv.addWeighted(image, 2.5, numpy.zeros(image.shape, image.dtype), 0, 0)
+    sortedVector.append(brightened)
+
+
+
+col_1 = np.vstack([sortedVector[0],sortedVector[0],sortedVector[0]]) # Simply put the images in the list
+col_2 = np.vstack([sortedVector[1],sortedVector[1],sortedVector[1]]) # Simply put the images in the list
+col_3 = np.vstack([sortedVector[8],sortedVector[8],sortedVector[8]]) # Simply put the images in the list
+
+collage = np.hstack([col_1, col_2,col_3])
 
 col_1 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
 col_2 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
