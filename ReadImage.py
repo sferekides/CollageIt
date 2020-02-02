@@ -40,7 +40,7 @@ cv.waitKey(0)
 #I believe that we should use it for brightening light images that we will use to write or dark images if it were reversed
 #My understanding of this method is that it takes a zeroes vector and somehow weights the image with them. I believe that you
 # should be able to do the opposite with black but it might be more difficult to figure out how to do this
-contrast_img = cv.addWeighted(img_j, 2.5, numpy.zeros(img_j.shape, img_j.dtype), 0, 0)
+contrast_img = cv.addWeighted(img_j, 0.4, numpy.zeros(img_j.shape, img_j.dtype), 0, 0)
 cv.imshow('FLEG logo - Brightened', contrast_img)
 cv.waitKey(0)
 
@@ -56,5 +56,13 @@ gray_img = cv.cvtColor(img_j, cv.COLOR_BGR2GRAY)
 cv.imshow('FLEG logo - Gray-Scaled', gray_img)
 cv.waitKey(0)
 
+
+#black image for testing
+gray_img = numpy.zeros([559, 559, 3], dtype=numpy.uint8)
+gray_img.fill(5)
+
+darker_img = cv.addWeighted(img_j, 0.4, gray_img, 0.1,0)
+cv.imshow('FLEG logo - Darkened', darker_img)
+cv.waitKey(0)
 
 

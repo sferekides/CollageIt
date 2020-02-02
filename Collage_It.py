@@ -2,6 +2,7 @@ import cv2 as cv
 import numpy as np
 import os
 import random
+from datetime import datetime
 
 #function that I found on Stack Overflow and modified to fit our needs 
 #pass in folder name to method and will iterate through folder and load all images using openCV function call
@@ -25,7 +26,7 @@ def letterA(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 #messed up go back and fix
@@ -38,7 +39,7 @@ def letterB(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterC(textImages, backgroundImages):
@@ -51,7 +52,7 @@ def letterC(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(a)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(a)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterD(textImages, backgroundImages):
@@ -64,7 +65,7 @@ def letterD(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)],textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterE(textImages, backgroundImages):
@@ -77,7 +78,7 @@ def letterE(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterF(textImages, backgroundImages):
@@ -90,7 +91,7 @@ def letterF(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterG(textImages, backgroundImages):
@@ -103,7 +104,7 @@ def letterG(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)],backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterH(textImages, backgroundImages):
@@ -116,7 +117,7 @@ def letterH(textImages, backgroundImages):
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterI(textImages, backgroundImages):
@@ -127,7 +128,7 @@ def letterI(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterJ(textImages, backgroundImages):
@@ -138,7 +139,7 @@ def letterJ(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterK(textImages, backgroundImages):
@@ -149,7 +150,7 @@ def letterK(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])  
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterL(textImages, backgroundImages):
@@ -160,7 +161,7 @@ def letterL(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterM(textImages, backgroundImages):
@@ -171,7 +172,7 @@ def letterM(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])  
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterN(textImages, backgroundImages):
@@ -182,7 +183,7 @@ def letterN(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])  
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterO(textImages, backgroundImages):
@@ -193,7 +194,7 @@ def letterO(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterP(textImages, backgroundImages):
@@ -204,7 +205,7 @@ def letterP(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterQ(textImages, backgroundImages):
@@ -215,7 +216,7 @@ def letterQ(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterR(textImages, backgroundImages):
@@ -226,7 +227,7 @@ def letterR(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterS(textImages, backgroundImages):
@@ -237,7 +238,7 @@ def letterS(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterT(textImages, backgroundImages):
@@ -248,7 +249,7 @@ def letterT(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterU(textImages, backgroundImages):
@@ -259,7 +260,7 @@ def letterU(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterV(textImages, backgroundImages):
@@ -270,7 +271,7 @@ def letterV(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterW(textImages, backgroundImages):
@@ -281,7 +282,7 @@ def letterW(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterX(textImages, backgroundImages):
@@ -292,7 +293,7 @@ def letterX(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])  
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterY(textImages, backgroundImages):
@@ -303,7 +304,7 @@ def letterY(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]])  
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
     return cols
 
 def letterZ(textImages, backgroundImages):
@@ -314,7 +315,23 @@ def letterZ(textImages, backgroundImages):
     col_3 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]])  
     col_4 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
     col_5 = np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], textImages[rand(t)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
-    cols = np.hstack([col_1, col_2,col_3, col_4,col_5])
+    cols = np.hstack([col_1, col_2, col_3, col_4, col_5])
+    return cols
+
+def letterSpace(textImages, backgroundImages) :
+    b = len(backgroundImages)
+    t = len(textImages)
+    col =  np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]]) 
+    cols = np.hstack([col])
+    return cols
+
+def wordSpace(textImages, backgroundImages) :
+    b = len(backgroundImages)
+    t = len(textImages)
+    col_1 =  np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])
+    col_2 =  np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])
+    col_3 =  np.vstack([backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)], backgroundImages[rand(b)]])
+    cols = np.hstack([col_1, col_2, col_3])
     return cols
 
 def rand(size):
@@ -328,7 +345,7 @@ def determine_length_of_image(user_input):
         else :
             total+=6
     return total
-
+        
 #calls method that will load images and place them in an array
 stored_images = load_images_from_folder('Images_For_Hack')
 
@@ -349,17 +366,19 @@ for image in stored_images:
 ReS_images = []
 
 for image in BG_images:
-    img = cv.resize(image, (0,0), fx=0.25, fy=0.25)
+    img = cv.resize(image, (0,0), fx=0.09, fy=0.09)
+    height, width = img.shape[0:2]
     ReS_images.append(img)
 
-#white image
-white_img = np.zeros([100, 100, 3], dtype=np.uint8)
-white_img.fill(255)
-whiteImages = [white_img]
 
-#black image
+#white image for testing
+#white_img = np.zeros([100, 100, 3], dtype=np.uint8)
+#white_img.fill(255)
+#whiteImages = [white_img]
+
+#black image for testing
 black_img = np.zeros([100, 100, 3], dtype=np.uint8)
-black_img.fill(0)
+black_img.fill(5)
 blackImages = [black_img]
 
 # ****** Starting program with user input below ****** #
@@ -371,7 +390,6 @@ outputMessage = input("What word or words would you like to display?\n")
 
 #this method will tell you what the width of the collage must be.
 width_of_collage = determine_length_of_image(outputMessage)
-print(width_of_collage)
 
 sumGray = 0
 ranking = []
@@ -385,54 +403,132 @@ for images in  ReS_images :
     sumGray = 0
 
 Z = [x for _,x in sorted(zip(ranking,ReS_images))]
-#print(ranking)
 
 midPoint = int((len(Z) / 2))
 
 darkImages = []
 lightImages = []
 
+gray_img = np.zeros([54, 54], dtype=np.uint8)
+gray_img.fill(254)
+
+darkened_Images = []
+
 for index, image in zip(range(midPoint), Z) :
-    blurred = cv.GaussianBlur(image, (3,3), 0) 
+    darkened = cv.addWeighted(image, 0.4, gray_img, 0.1,0)
+    darkened_Images.append(darkened)
+
+for image in darkened_Images :
+    blurred = cv.GaussianBlur(image, (1,1), 0) 
     darkImages.append(blurred)
 
 midPoint += 1
 for image in Z[midPoint:]:
-    brightened = cv.addWeighted(image, 1.1, np.zeros(image.shape, image.dtype), 0, 0)
+    brightened = cv.addWeighted(image, 0.8, np.zeros(image.shape, image.dtype), 0, 0)
     lightImages.append(brightened)
 
+random.seed(datetime.now())
+def output_columns(user_input) :
+    columns = []
+    for x in range(3):
+        vec = letterSpace(lightImages, darkImages)
+        columns.append(vec)
+    for charac in user_input :
+        vec = []
+        if charac=='a' or charac =='A':
+            vec = letterA(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='b' or charac =='B':
+            vec = letterB(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='c' or charac =='C':
+            vec = letterC(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='d' or charac =='D':
+            vec = letterD(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='e' or charac =='E':
+            vec = letterE(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='f' or charac =='F':
+            vec = letterF(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='g' or charac =='G':
+            vec = letterG(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='h' or charac =='H':
+            vec = letterH(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='i' or charac =='I':
+            vec = letterI(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='j' or charac =='J':
+            vec = letterJ(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='k' or charac =='K':
+            vec = letterK(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='l' or charac =='L':
+            vec = letterL(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='m' or charac =='M':
+            vec = letterM(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='n' or charac =='N':
+            vec = letterN(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='o' or charac =='O':
+            vec = letterO(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='p' or charac =='P':
+            vec = letterP(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='q' or charac =='Q':
+            vec = letterQ(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='r' or charac =='R':
+            vec = letterR(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='s' or charac =='S':
+            vec = letterS(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='t' or charac =='T':
+            vec = letterT(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='u' or charac =='U':
+            vec = letterU(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='v' or charac =='V':
+            vec = letterV(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='w' or charac =='W':
+            vec = letterW(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='x' or charac =='X':
+            vec = letterX(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='y' or charac =='Y':
+            vec = letterY(lightImages, darkImages)
+            columns.append(vec)
+        if charac=='z' or charac =='Z':
+            vec = letterZ(lightImages, darkImages)
+            columns.append(vec)
+        vec = letterSpace(lightImages, darkImages)
+        columns.append(vec)
+    
+    for x in range(2):
+        vec = letterSpace(lightImages, darkImages)
+        columns.append(vec)  
+    return columns
 
-col_1 = np.vstack([darkImages[0],darkImages[1], darkImages[2]]) # Simply put the images in the list
-col_2 = np.vstack([darkImages[2],darkImages[3], darkImages[4]]) # Simply put the images in the list
-col_3 = np.vstack([lightImages[0],lightImages[1], lightImages[2]]) # Simply put the images in the list
-col_4 = np.vstack([lightImages[2],lightImages[3], lightImages[3]]) # Simply put the images in the list
 
+fullImage = output_columns(outputMessage)
 
-collage = np.hstack([col_1, col_2, col_3, col_4])
+collage = np.hstack(fullImage)
 
-#cv.imshow('Image to display',collage)
-#cv.waitKey(0)
-
-col_1 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_2 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_3 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_4 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_5 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_6 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_7 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_8 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_9 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_10 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_11 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_12 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_13 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-col_14 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
-"s"
-collage = np.hstack([col_1, col_2,col_3, col_4,col_5, col_6,col_7, col_8,col_9, col_10,col_11, col_12,col_13, col_14])
-
-#cv.imshow('Image to display',collage)
-#cv.waitKey(0)
+collage = cv.resize(collage, (0,0), fx=0.5, fy=0.5)
 
 cv.imshow('Image to display',collage)
-cv.waitKey(0)
+cv.imwrite( "Gray_Image.jpg", collage )
+#cv.waitKey(0)
 
