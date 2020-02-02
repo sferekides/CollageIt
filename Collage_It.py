@@ -349,7 +349,7 @@ for image in stored_images:
 ReS_images = []
 
 for image in BG_images:
-    img = cv.resize(image, (0,0), fx=0.50, fy=0.50)
+    img = cv.resize(image, (0,0), fx=0.25, fy=0.25)
     ReS_images.append(img)
 
 #white image
@@ -389,24 +389,29 @@ Z = [x for _,x in sorted(zip(ranking,ReS_images))]
 
 midPoint = int((len(Z) / 2))
 
-sortedVector = []
+darkImages = []
+lightImages = []
 
 for index, image in zip(range(midPoint), Z) :
-    blurred = cv.GaussianBlur(image, (11,11), 0) 
-    sortedVector.append(blurred)
+    blurred = cv.GaussianBlur(image, (3,3), 0) 
+    darkImages.append(blurred)
 
 midPoint += 1
 for image in Z[midPoint:]:
-    brightened = cv.addWeighted(image, 2.5, numpy.zeros(image.shape, image.dtype), 0, 0)
-    sortedVector.append(brightened)
+    brightened = cv.addWeighted(image, 1.1, np.zeros(image.shape, image.dtype), 0, 0)
+    lightImages.append(brightened)
 
 
+col_1 = np.vstack([darkImages[0],darkImages[1], darkImages[2]]) # Simply put the images in the list
+col_2 = np.vstack([darkImages[2],darkImages[3], darkImages[4]]) # Simply put the images in the list
+col_3 = np.vstack([lightImages[0],lightImages[1], lightImages[2]]) # Simply put the images in the list
+col_4 = np.vstack([lightImages[2],lightImages[3], lightImages[3]]) # Simply put the images in the list
 
-col_1 = np.vstack([sortedVector[0],sortedVector[0],sortedVector[0]]) # Simply put the images in the list
-col_2 = np.vstack([sortedVector[1],sortedVector[1],sortedVector[1]]) # Simply put the images in the list
-col_3 = np.vstack([sortedVector[8],sortedVector[8],sortedVector[8]]) # Simply put the images in the list
 
-collage = np.hstack([col_1, col_2,col_3])
+collage = np.hstack([col_1, col_2, col_3, col_4])
+
+#cv.imshow('Image to display',collage)
+#cv.waitKey(0)
 
 col_1 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
 col_2 = np.vstack([ReS_images[0],ReS_images[1], ReS_images[2]]) # Simply put the images in the list
